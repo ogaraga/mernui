@@ -10,14 +10,16 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    background-color: white;
   }
   
   .register_form {
     background-color: azure;
-    min-width: 90%;
+    width: 90%;
     margin: 10px auto;
     min-height: 60%;
     padding: 10px;
+    border: 1px solid  rgba(128, 128, 128, 0.445);;
   }
   .register_exception{
     color: red;
@@ -26,7 +28,7 @@
   }
   .register_form h1 {
     text-align: center;
-    color: #3e5151;
+    color: rgba(128, 128, 128, 0.445);
     text-transform: uppercase;
     margin: 10px auto;
     font-size: 20px;
@@ -41,7 +43,7 @@
   .register_form label{
       text-transform: uppercase;
       margin-top: 10px;
-      color: #3e5151;
+      color: gray;
   }
   .register_form label span{
       color: red
@@ -49,10 +51,27 @@
   .register_form input{
       padding: 10px;
       width: 50%;
-      border: 1px solid #3e5151 ;
+      border: 1px solid rgba(128, 128, 128, 0.308) ;
       outline: none;
       border-width: 1px;
       
+  }
+  .register_form input::placeholder{
+    color: rgba(128, 128, 128, 0.568);
+  }
+  .register_form a{
+    background-color: rgba(128, 128, 128, 0.514);
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .register_form a:hover{
+    background-color: aliceblue;
+    border: 1px solid  rgba(128, 128, 128, 0.445);;
+    color: cornflowerblue;
   }
   .register_form .box span{
     color: red;
@@ -76,13 +95,17 @@
     margin-left: 10px;
     text-align: center;
     width: 50%;
+    color: grey;
 
+ }
+ .register_form p{
+  color: grey;
  }
   .register_form button{
       padding: 10px;
       margin: 10px auto;
       width: 50%;
-      background-color: #3e5151;
+      background-color: rgba(128, 128, 128, 0.514);
       color: aliceblue;
       text-transform: uppercase;
       border: none;
@@ -90,6 +113,7 @@
       cursor: pointer;
   }
   .register_form button:hover{
-  background-color: #6C5B7B;
-  color:#FF8C00 ;
+  background-color: aliceblue;
+  border: 1px solid  rgba(128, 128, 128, 0.445);;
+  color:blueviolet ;
   }

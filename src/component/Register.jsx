@@ -7,10 +7,12 @@ function Register() {
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  
   //navigation control
   const navigate = useNavigate();
-
+ const handleSign = ()=>{
+  return navigate('/login');
+ }
   //accessing dom elements
   function signup(event) {
     event.preventDefault();
@@ -63,6 +65,7 @@ function Register() {
         email == "")
     ) {
       spans.innerHTML = "Input field(s) can't be empty!";
+      spans.style.color = "red";
       label.innerHTML = "Password must be greater than 4 characters!";
       return navigate('/')
     } else {
@@ -123,7 +126,7 @@ function Register() {
           Sign Up
         </button>
         <p>Already registered?</p>
-        <a href="/login">Sign In</a>
+        <a id="btn" onClick={handleSign}>Sign In</a>
         <i id="spans"></i>
         <i className={styles.register_exception} id="register_exception"></i>
       </form>

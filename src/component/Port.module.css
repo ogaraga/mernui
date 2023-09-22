@@ -5,13 +5,13 @@
 }
 
 body {
-  background-color: #3e5151;
+  background-color: white;
   min-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
 }
 .nav{
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.342);
   text-align: center;
   color: #ffff;
   text-transform: uppercase;
@@ -85,7 +85,7 @@ footer{
 }
 .port h1 {
   text-align: center;
-  color: white;
+  color: rgba(128, 128, 128, 0.63);
   margin-top: -100px;
   font-size: 18px;
   text-transform: capitalize;
@@ -163,7 +163,10 @@ footer{
   height: 200px;
 }
 .port .svg_img p{
-  color: #ffff;
+  color: rgba(128, 128, 128, 0.829);
+}
+.port .svg_img:hover p{
+color: rgb(0, 89, 255);
 }
 .port a {
   color: aqua;
@@ -190,7 +193,7 @@ footer{
   font-weight: bolder;
 }
 footer{
-  background-color:gray;
+  background-color:rgba(128, 128, 128, 0.534);
   width: 100%;
   height: 45px;
   display: flex;
