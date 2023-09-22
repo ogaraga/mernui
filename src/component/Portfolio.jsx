@@ -33,9 +33,8 @@ function Portfolio() {
         </div>
       <div className={styles.contents}>
         <h1>
-          WELCOME TO MY PORTFOLIO, YOU MAY
-          <p style={{ color: "coral" }}>right-click </p>ON
-          <em style={{ color: "coral" }}>  {name} </em>BELLOW TO PROCEED!
+          Welcome to my portfolio.<p style={{ color: "coral" }}>Right-click </p>on
+          <em style={{ color: "coral" }}>  {name} </em>bellow to proceed!
         </h1> 
         <Link to={init} target="_blank" onClick={handleClick}>
           portfolio<hr />
