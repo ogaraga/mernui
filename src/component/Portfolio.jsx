@@ -9,9 +9,30 @@ const valName = 'MONGO SERVER 2';
 //component portfolio
 function Portfolio() {
   const [init, setInit] = useState("https://portfolio-ui-neon.vercel.app/home.html");
-  
+  // const [toggleOn, setToggleOn] =useState(true);
+  // const [toggleOff, setToggleOff] =useState(false);
   const navigate = useNavigate();
 
+  const toggleOnClick =()=>{
+    const Port = document.querySelector('#port');
+    const toggleOn = document.querySelector('.fa-toggle-on');
+    const toggleOff = document.querySelector('.fa-toggle-off');
+    toggleOn.style.display = 'none';
+    toggleOff.style.display = 'block';
+    Port.style.backgroundColor = 'black';
+    Port.style.color = 'white';
+
+  }
+  
+  const toggleOffClick =()=>{
+    const Port = document.querySelector('#port');
+    const toggleOn = document.querySelector('.fa-toggle-on');
+    const toggleOff = document.querySelector('.fa-toggle-off');
+    toggleOff.style.display = 'none';
+    toggleOn.style.display = 'block';
+    Port.style.backgroundColor = 'aliceblue';
+    Port.style.color = 'black';
+  }
   const handleClick = (e) => {
     e.preventDefault();
     navigate(setInit("https://portfolio-ui-neon.vercel.app/home.html"));
@@ -21,8 +42,12 @@ function Portfolio() {
     <>
     <nav className={styles.nav}>
       <h1>Navigation page</h1>
+      <div className={styles.toggle}>
+      <i className="fa-solid fa-toggle-on" onClick={toggleOnClick}></i>
+      <i className="fa-solid fa-toggle-off" onClick={toggleOffClick}></i>
+     </div>
     </nav>
-    <main className={styles.port}>
+    <main className={styles.port} id="port" >
       <div className={styles.go_img}>
         <img
           className={styles.image}

@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    background-color:aliceblue;
+   background-color:aliceblue;
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -14,7 +14,7 @@
   }
   
   .login_form {
-    background-color: azure;
+    background-color:aliceblue;
     width: 330px;
     margin: 10px auto;
     height: 330px;

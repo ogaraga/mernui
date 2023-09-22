@@ -10,11 +10,10 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    background-color: white;
   }
   
   .register_form {
-    background-color: azure;
+    background-color: aliceblue;
     width: 90%;
     margin: 10px auto;
     min-height: 60%;
