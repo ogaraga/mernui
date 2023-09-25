@@ -33,7 +33,7 @@ function Portfolio() {
   }
   const handleClick = (e) => {
     e.preventDefault();
-    navigate(setInit("https://ogaraga.github.io/ogaraga-portfolio/home.html"));
+    navigate(setInit("https://ogaraga.github.io/ogaraga-portfolio"));
 
     function setTimeOver() {
       return navigate('/')
