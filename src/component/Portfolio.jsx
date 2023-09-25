@@ -1,6 +1,7 @@
 import { useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import  styles from "./Port.module.css";
+
 //some variable names used dynamically
 const name = "PORTFOLIO";
 const date = new Date().getFullYear();
@@ -8,10 +9,8 @@ const valName = 'MONGO SERVER 2';
 
 //component portfolio
 function Portfolio() {
-  const [init, setInit] = useState("https://portfolio-ui-neon.vercel.app/home.html");
-  // const [toggleOn, setToggleOn] =useState(true);
-  // const [toggleOff, setToggleOff] =useState(false);
-  const navigate = useNavigate();
+  const [init, setInit] = useState("");
+   const navigate = useNavigate();
 
   const toggleOnClick =()=>{
     const Port = document.querySelector('#port');
@@ -23,8 +22,7 @@ function Portfolio() {
     Port.style.color = 'white';
 
   }
-  
-  const toggleOffClick =()=>{
+    const toggleOffClick =()=>{
     const Port = document.querySelector('#port');
     const toggleOn = document.querySelector('.fa-toggle-on');
     const toggleOff = document.querySelector('.fa-toggle-off');
@@ -35,8 +33,18 @@ function Portfolio() {
   }
   const handleClick = (e) => {
     e.preventDefault();
-    navigate(setInit("https://portfolio-ui-neon.vercel.app/home.html"));
+    navigate(setInit("https://ogaraga.github.io/ogaraga-portfolio/home.html"));
+
+    function setTimeOver() {
+      return navigate('/')
+    }
+//timeout session being called
+  
+    setTimeout(setTimeOver, 20000);
   };
+
+  
+
 
   return (
     <>
@@ -58,10 +66,10 @@ function Portfolio() {
         </div>
       <div className={styles.contents}>
         <h1>
-          Welcome to my portfolio.<p style={{ color: "coral" }}>Right-click </p>on
+          Welcome to my portfolio.<p style={{ color: "coral" }}>Click </p>on
           <em style={{ color: "coral" }}>  {name} </em>bellow to proceed!
         </h1> 
-        <Link to={init} target="_blank" onClick={handleClick}>
+        <Link to={init} target="_blank" onMouseOver={handleClick}>
           portfolio<hr />
         </Link>
 
